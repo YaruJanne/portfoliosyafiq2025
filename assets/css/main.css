@@ -668,29 +668,22 @@ section,
   width: 100%;
   min-height: calc(100vh - 92px);
   position: relative;
-  padding: 60px 0;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.hero {
-  position: relative;
   text-align: center;
+  overflow: hidden;
   padding: 80px 0;
 }
 
 .hero img {
   position: absolute;
-  left: 250px;
-  top: 0%;
-  transform: translateY(-50%);
-  width: 1000px; /* adjust width as needed */
+  left: 20px;
+  bottom: 0;
+  width: 600px; /* Large size for desktop */
   height: auto;
-  border-radius: 0; /* optional: remove round crop */
   z-index: 1;
 }
-
 
 .hero:before {
   content: "";
@@ -701,10 +694,10 @@ section,
 }
 
 .hero .container {
-  left: 100px;
-  top: 60px;
   position: relative;
   z-index: 3;
+  padding-left: 80px; /* slight right shift */
+  padding-top: 80px;  /* slight downward shift */
 }
 
 .hero h2 {
@@ -714,7 +707,7 @@ section,
 }
 
 .hero p {
-  margin: 5px 0 0 0;
+  margin: 10px 0;
   font-size: 36px;
   font-weight: 600;
 }
@@ -723,7 +716,37 @@ section,
   letter-spacing: 1px;
 }
 
+/* Social links styling */
+.social-links a {
+  font-size: 48px;
+  margin: 0 15px;
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+  color: #0d6efd;
+}
+
+/* Mobile view fix */
 @media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 60px 20px;
+  }
+
+  .hero img {
+    position: static;
+    margin: 0 auto 20px;
+    width: 200px;
+  }
+
+  .hero .container {
+    padding-left: 0;
+    padding-top: 20px;
+  }
+
   .hero h2 {
     font-size: 32px;
   }
@@ -731,32 +754,12 @@ section,
   .hero p {
     font-size: 20px;
   }
+
+  .social-links a {
+    font-size: 36px;
+  }
 }
 
-.social-icons {
-  display: flex;
-  gap: 60px;
-  justify-content: center;
-  align-items: center;
-}
-
-.social-icons .icon-link img {
-  width: 32px;
-  height: 32px;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.social-icons .icon-link:hover img {
-  transform: scale(2);
-  filter: brightness(1.2);
-}
-
-.social-links a {
-  font-size: 50px;
-  margin: 0 15px;
-  color: white; /* Or use #fff or your preferred color */
-  transition: transform 0.3s ease, color 0.3s ease;
-}
 
 .social-links a:hover {
   transform: scale(1.2);
