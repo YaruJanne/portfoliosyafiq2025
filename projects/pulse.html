@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WRLLWPTQ');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>try{if(sessionStorage.getItem('pt'))document.documentElement.classList.add('pt-in')}catch(e){}</script>
+  <script src="../assets/js/transition.js" defer></script>
+  <title>Pulse: Attendance App | Muhammad Syafiq</title>
+  <meta name="description" content="Android attendance app where students check in with one tap and Bluetooth proves they are really in the room.">
+  <meta property="og:title" content="Pulse: Attendance App | Muhammad Syafiq">
+  <meta property="og:description" content="Android attendance app where students check in with one tap and Bluetooth proves they are really in the room.">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body style="--accent:#818CF8;--accent-soft:#9AA3F9;--accent-bg:#212539">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WRLLWPTQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <nav class="site-nav" aria-label="Main">
+    <a class="logo" href="../index.html">syafiq<span>.</span></a>
+    <button type="button" class="menu-btn" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../index.html">Home</a></li><li><a href="../projects.html" aria-current="page">Projects</a></li><li><a href="../experience.html">Experience</a></li><li><a href="../index.html#about">About</a></li><li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section class="p-hero">
+    <img class="p-hero-bg" src="../assets/img/pulse/pulse-cover.jpg" alt="" style="view-transition-name:thumb-pulse">
+    <div class="p-hero-shade"></div>
+    <canvas class="fx" data-fx="beacon" aria-hidden="true"></canvas>
+    <div class="container p-hero-content">
+      <a class="back" href="../projects.html">← Back to projects</a>
+      <div class="chips"><span class="chip">App</span><span class="chip chip-award">v1.0 · Alpha release</span></div>
+      <h1 class="h-page">Pulse: Attendance App</h1>
+      <p class="lead" style="max-width: 760px">An Android attendance app for university classes. Students check in with one tap on Pulse, a smiling mascot, and the lecturer’s phone proves they are really in the room using Bluetooth. Built solo for MITM5423 Mobile App Development in my Master’s at UTeM.</p>
+      <div class="btn-row"><a class="btn btn-primary" href="https://github.com/YaruJanne/pulse/releases" target="_blank" rel="noopener">Download the APK on GitHub ↗</a></div>
+    </div>
+  </section>
+  <section class="container" style="padding-top: 40px">
+    <div class="phones"><figure class="phone"><img src="../assets/img/pulse/06-lecturerlivesession.webp" alt="Pulse: Attendance App screen 1" loading="lazy"></figure><figure class="phone phone-mid"><img src="../assets/img/pulse/12-studentcheckin.webp" alt="Pulse: Attendance App screen 2" loading="lazy"></figure><figure class="phone"><img src="../assets/img/pulse/07-lecturerregister.webp" alt="Pulse: Attendance App screen 3" loading="lazy"></figure></div>
+    <div class="stack" style="margin-top: 48px; gap: 18px">
+      <h2 class="h-section" style="font-size: 30px">Pulse in 50 seconds</h2>
+      <div class="video"><video controls playsinline preload="metadata" poster="../assets/video/pulse-poster.jpg" style="width:100%;height:100%;display:block;background:#000"><source src="../assets/video/pulse-intro.mp4" type="video/mp4">Your browser can't play this video.</video></div>
+    </div>
+  </section>
+  <section class="container section-tight"><div class="facts"><div class="fact"><span>ROLE</span><b>Solo developer</b></div><div class="fact"><span>PLATFORM</span><b>Android 7.1+ (64-bit)</b></div><div class="fact"><span>TOOLS</span><b>Unity 6 (C#), native Android plugin (Java), Supabase, Google Gemini</b></div><div class="fact"><span>STATUS</span><b>v1.0 · Alpha release</b></div></div></section>
+  <section class="container section-tight">
+    <div class="split">
+      <div class="main prose"><div><h2>The problem</h2><p>I approached 5 lecturers and interviewed 3. Taking attendance cost them 5–10 minutes per class with paper sheets, name calling or self-marking, and friends signing in for absent students (“buddy punching”) was a real issue.</p><p>The admin after class turned out to be just as painful: absences tracked by hand for warning letters, and medical certificates arriving scattered across Telegram, WhatsApp, email and paper. Every lecturer also wanted a manual override for students with a flat battery or no internet.</p></div><div><h2>The solution: Bluetooth proof of presence</h2><p>The lecturer’s phone broadcasts a Bluetooth token that changes every 10 seconds, and the server checks it before recording a check-in, so a screenshot or a code forwarded on WhatsApp doesn’t work. I rejected GPS because indoors it can’t tell neighbouring rooms apart.</p><p>If Bluetooth fails, students can type a 6-digit code, and the lecturer can always mark someone by hand.</p></div><div><h2>What it does</h2><p>Lecturers get a live session with a rotating code and a roster that fills in as students arrive, a week-by-week register with attendance percentages and warning flags, PDF and Excel export, an inbox for join requests and excuse letters with the MC attached, and insights on who is below the minimum.</p><p>An AI assistant (Google Gemini, called through a server function) writes class summaries and drafts messages to students. Names and matric numbers are swapped for S1, S2… before anything is sent, and no API key is stored in the app.</p></div><div><h2>Polish</h2><p>Spring animations, screens that grow out of the card you tapped, Undo instead of “Are you sure?” pop-ups, haptics, a custom typing caret, a keyboard that never covers a field, and a Pulse mascot whose mood changes: sleepy, ready, celebrating or late.</p></div><div><h2>Under the hood</h2><p>The UI is built entirely in code in Unity 6 (C#) for Android. A native Java plugin handles the Bluetooth beacon and scanning, fingerprint sign-in, file picking and the keyboard. Supabase provides PostgreSQL with row-level security, auth, storage and the AI edge function. Check-ins are verified in server functions with HMAC tokens and TOTP codes, so a modified app can’t fake attendance.</p></div><div><h2>Next: v2.0 (in progress)</h2><p>Built after v1.0 and not yet tested on phones: one session per day per class, an offline mode where student phones save the Bluetooth proof and upload it later, an activity score with streaks, a top-10 leaderboard and badges. Points never affect marks.</p></div><div><h2>How I used AI</h2><p>Pulse was built with AI assistance (Claude). The ideas, decisions and testing were mine, and I reviewed every code suggestion before accepting it.</p></div></div>
+      <aside class="side stack" aria-label="Key numbers">
+        <h2 class="eyebrow" style="color: var(--faint)">Key numbers</h2>
+        <div class="keynum"><b>10 s</b><span>Bluetooth token rotation</span></div><div class="keynum"><b>5–10 min</b><span>per class spent on attendance, from lecturer interviews</span></div><div class="keynum"><b>3</b><span>lecturers interviewed for the research</span></div>
+      </aside>
+    </div>
+  </section>
+  <section class="container stack" style="padding-top: 40px; padding-bottom: 72px">
+    <h2 class="h-section" style="font-size: 30px">Gallery</h2>
+    <div class="gallery gallery-phone"><button type="button" aria-label="Enlarge screenshot 1"><img src="../assets/img/pulse/08-lecturerinbox.webp" alt="Pulse: Attendance App screenshot 1" loading="lazy"></button><button type="button" aria-label="Enlarge screenshot 2"><img src="../assets/img/pulse/09-lecturerinsights.webp" alt="Pulse: Attendance App screenshot 2" loading="lazy"></button><button type="button" aria-label="Enlarge screenshot 3"><img src="../assets/img/pulse/10-assistantchat.webp" alt="Pulse: Attendance App screenshot 3" loading="lazy"></button><button type="button" aria-label="Enlarge screenshot 4"><img src="../assets/img/pulse/11-studentclasses.webp" alt="Pulse: Attendance App screenshot 4" loading="lazy"></button><button type="button" aria-label="Enlarge screenshot 5"><img src="../assets/img/pulse/05-lecturerclasses.webp" alt="Pulse: Attendance App screenshot 5" loading="lazy"></button><button type="button" aria-label="Enlarge screenshot 6"><img src="../assets/img/pulse/13-adminapprovals.webp" alt="Pulse: Attendance App screenshot 6" loading="lazy"></button><button type="button" aria-label="Enlarge screenshot 7"><img src="../assets/img/pulse/01-login.webp" alt="Pulse: Attendance App screenshot 7" loading="lazy"></button><button type="button" aria-label="Enlarge screenshot 8"><img src="../assets/img/pulse/02-signup.webp" alt="Pulse: Attendance App screenshot 8" loading="lazy"></button><button type="button" aria-label="Enlarge screenshot 9"><img src="../assets/img/pulse/04-profilesetup.webp" alt="Pulse: Attendance App screenshot 9" loading="lazy"></button></div>
+  </section>
+  <nav class="pager" aria-label="More projects">
+    <div class="container">
+      <a href="typography.html" data-accent="#F5D547">← Typography</a>
+      <a href="duel-beats.html" data-accent="#FF5CA8">Duel Beats →</a>
+    </div>
+  </nav>
+</main>
+<dialog class="lightbox" aria-label="Screenshot preview">
+  <button type="button" class="lightbox-close" aria-label="Close">×</button>
+  <button type="button" class="lightbox-prev" aria-label="Previous screenshot">←</button>
+  <img src="" alt="">
+  <button type="button" class="lightbox-next" aria-label="Next screenshot">→</button>
+  <span class="lightbox-count"></span>
+</dialog>
+<footer class="site-footer" id="contact">
+  <div class="container footer-inner">
+    <div>
+      <h2>Let's work together.</h2>
+      <a class="link-accent" href="mailto:syafiqkhairuddin22@gmail.com">syafiqkhairuddin22@gmail.com</a>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/muhammad-syafiq-b21a9b30b/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/YaruJanne" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://yarujanne.itch.io/" target="_blank" rel="noopener">itch.io</a>
+      <a href="../assets/files/Resume-Syafiq.pdf" download>Resume (PDF)</a>
+    </div>
+  </div>
+  <p class="container copyright">© <span data-year>2026</span> Muhammad Syafiq Bin Khairuddin</p>
+</footer>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>
