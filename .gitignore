@@ -1,0 +1,36 @@
+# ---- Source material: kept on this computer, NOT published ----
+assets/Vexcode VR/
+assets/MP4/
+assets/FBX/
+assets/Certificate/
+Claude outputs/
+_old-site/
+
+# MCT slides (not shown on the site)
+assets/img/vexcode/slide-*.jpg
+
+# Old template files no longer used by the site
+assets/vendor/
+assets/scss/
+assets/css/main.css
+assets/js/main.js
+forms/
+portfolio-details.html
+service-details.html
+starter-page.html
+Readme.txt
+assets/img/hero-img.jpg
+
+# Old resumes (contain personal details) – the site uses assets/files/Resume-Syafiq.pdf
+assets/img/CV SYAFIQ.pdf
+assets/img/Resume Syafiq.pdf
+
+# Helper notes
+assets/models/README.txt
+assets/certificates/README.txt
+
+# System files
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
